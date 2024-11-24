@@ -20,6 +20,7 @@ class ALocalMultiplayerCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
+
 	/** Camera boom positioning the camera behind the character */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	USpringArmComponent* CameraBoom;
@@ -44,6 +45,13 @@ class ALocalMultiplayerCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* LookAction;
 
+	//Attack
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* AttackAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	float bach;
+
 public:
 	ALocalMultiplayerCharacter();
 	
@@ -55,6 +63,8 @@ protected:
 
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
+
+	void Attack(const FInputActionValue& Value);
 			
 
 protected:

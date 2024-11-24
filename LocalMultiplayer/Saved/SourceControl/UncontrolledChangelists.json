@@ -8,7 +8,11 @@
 				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/A/SF/871AVYURJWFNJSVX14R1AN.uasset",
 				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/ThirdPerson/Maps/ThirdPersonMap.umap",
 				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/BossyEnemy/Animations/RootMotion/Attacks/Boss_Attack_Uppercut_RM.uasset",
-				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset"
+				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset",
+				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/ThirdPerson/Input/IMC_Default.uasset",
+				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/ThirdPerson/Input/Actions/IA_Attack.uasset",
+				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/ThirdPerson/Blueprints/TPC_2.uasset",
+				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/ThirdPerson/Input/Actions/Attack.uasset"
 			]
 		}
 	]

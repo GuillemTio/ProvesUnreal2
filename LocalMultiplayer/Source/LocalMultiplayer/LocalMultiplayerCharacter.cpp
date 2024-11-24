@@ -86,6 +86,10 @@ void ALocalMultiplayerCharacter::SetupPlayerInputComponent(UInputComponent* Play
 
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ALocalMultiplayerCharacter::Look);
+
+		//ATTACK
+		EnhancedInputComponent->BindAction(AttackAction, ETriggerEvent::Triggered, this, &ALocalMultiplayerCharacter::Attack);
+
 	}
 	else
 	{
@@ -127,4 +131,9 @@ void ALocalMultiplayerCharacter::Look(const FInputActionValue& Value)
 		AddControllerYawInput(LookAxisVector.X);
 		AddControllerPitchInput(LookAxisVector.Y);
 	}
+}
+
+void ALocalMultiplayerCharacter::Attack(const FInputActionValue& Value) 
+{
+	UE_LOG(LogTemp, Warning, TEXT("Attack Pressed!"));
 }

@@ -105,6 +105,22 @@ struct Z_Construct_UClass_ALocalMultiplayerCharacter_Statics
 		{ "ToolTip", "Look Input Action" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AttackAction_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Input" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//Attack\n" },
+#endif
+		{ "ModuleRelativePath", "LocalMultiplayerCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Attack" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bach_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Input" },
+		{ "ModuleRelativePath", "LocalMultiplayerCharacter.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraBoom;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_FollowCamera;
@@ -112,6 +128,8 @@ struct Z_Construct_UClass_ALocalMultiplayerCharacter_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_JumpAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MoveAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_LookAction;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_AttackAction;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_bach;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -125,6 +143,8 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALocalMultipla
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALocalMultiplayerCharacter_Statics::NewProp_JumpAction = { "JumpAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALocalMultiplayerCharacter, JumpAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_JumpAction_MetaData), NewProp_JumpAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALocalMultiplayerCharacter_Statics::NewProp_MoveAction = { "MoveAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALocalMultiplayerCharacter, MoveAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoveAction_MetaData), NewProp_MoveAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALocalMultiplayerCharacter_Statics::NewProp_LookAction = { "LookAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALocalMultiplayerCharacter, LookAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LookAction_MetaData), NewProp_LookAction_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALocalMultiplayerCharacter_Statics::NewProp_AttackAction = { "AttackAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALocalMultiplayerCharacter, AttackAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AttackAction_MetaData), NewProp_AttackAction_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ALocalMultiplayerCharacter_Statics::NewProp_bach = { "bach", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALocalMultiplayerCharacter, bach), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bach_MetaData), NewProp_bach_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ALocalMultiplayerCharacter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALocalMultiplayerCharacter_Statics::NewProp_CameraBoom,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALocalMultiplayerCharacter_Statics::NewProp_FollowCamera,
@@ -132,6 +152,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ALocalMul
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALocalMultiplayerCharacter_Statics::NewProp_JumpAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALocalMultiplayerCharacter_Statics::NewProp_MoveAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALocalMultiplayerCharacter_Statics::NewProp_LookAction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALocalMultiplayerCharacter_Statics::NewProp_AttackAction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALocalMultiplayerCharacter_Statics::NewProp_bach,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ALocalMultiplayerCharacter_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ALocalMultiplayerCharacter_Statics::DependentSingletons[])() = {
@@ -174,10 +196,10 @@ ALocalMultiplayerCharacter::~ALocalMultiplayerCharacter() {}
 struct Z_CompiledInDeferFile_FID_Users_Guillem_Desktop_UNI_LearnCourseC___ProvesUnreal2_LocalMultiplayer_Source_LocalMultiplayer_LocalMultiplayerCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ALocalMultiplayerCharacter, ALocalMultiplayerCharacter::StaticClass, TEXT("ALocalMultiplayerCharacter"), &Z_Registration_Info_UClass_ALocalMultiplayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALocalMultiplayerCharacter), 1665872491U) },
+		{ Z_Construct_UClass_ALocalMultiplayerCharacter, ALocalMultiplayerCharacter::StaticClass, TEXT("ALocalMultiplayerCharacter"), &Z_Registration_Info_UClass_ALocalMultiplayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALocalMultiplayerCharacter), 2596697096U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Guillem_Desktop_UNI_LearnCourseC___ProvesUnreal2_LocalMultiplayer_Source_LocalMultiplayer_LocalMultiplayerCharacter_h_3235505828(TEXT("/Script/LocalMultiplayer"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Guillem_Desktop_UNI_LearnCourseC___ProvesUnreal2_LocalMultiplayer_Source_LocalMultiplayer_LocalMultiplayerCharacter_h_1345510691(TEXT("/Script/LocalMultiplayer"),
 	Z_CompiledInDeferFile_FID_Users_Guillem_Desktop_UNI_LearnCourseC___ProvesUnreal2_LocalMultiplayer_Source_LocalMultiplayer_LocalMultiplayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Guillem_Desktop_UNI_LearnCourseC___ProvesUnreal2_LocalMultiplayer_Source_LocalMultiplayer_LocalMultiplayerCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
