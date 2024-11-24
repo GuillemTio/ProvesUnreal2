@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\guillem\\desktop\\uni\\learncoursec++\\provesunreal2\\localmultiplayer\\source\\localmultiplayer\\localmultiplayer.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\guillem\\desktop\\uni\\learncoursec++\\provesunreal2\\localmultiplayer\\intermediate\\build\\win64\\x64\\localmultiplayereditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\guillem\\desktop\\uni\\learncoursec++\\provesunreal2\\localmultiplayer\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\localmultiplayer\\definitions.localmultiplayer.h",
+            "c:\\users\\guillem\\desktop\\uni\\learncoursec++\\provesunreal2\\localmultiplayer\\source\\localmultiplayer\\localmultiplayer.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

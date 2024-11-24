@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\LocalMultiplayer.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\LocalMultiplayer.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\LocalMultiplayerEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\LocalMultiplayer">
+      <UniqueIdentifier>{97E69278-CAAA-30F2-B734-7B4FB5ED7451}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\LocalMultiplayer\LocalMultiplayer.Build.cs">
+      <Filter>Source\LocalMultiplayer</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\LocalMultiplayer\LocalMultiplayer.cpp">
+      <Filter>Source\LocalMultiplayer</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\LocalMultiplayer\LocalMultiplayer.h">
+      <Filter>Source\LocalMultiplayer</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\LocalMultiplayer\LocalMultiplayerCharacter.cpp">
+      <Filter>Source\LocalMultiplayer</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\LocalMultiplayer\LocalMultiplayerCharacter.h">
+      <Filter>Source\LocalMultiplayer</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\LocalMultiplayer\LocalMultiplayerGameMode.cpp">
+      <Filter>Source\LocalMultiplayer</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\LocalMultiplayer\LocalMultiplayerGameMode.h">
+      <Filter>Source\LocalMultiplayer</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
