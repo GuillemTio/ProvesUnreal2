@@ -4,6 +4,8 @@
 #include "Engine/LocalPlayer.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "Components/BoxComponent.h"
+#include "GameFramework/Actor.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/Controller.h"
@@ -18,6 +20,8 @@ DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
 ALocalMultiplayerCharacter::ALocalMultiplayerCharacter()
 {
+	PrimaryActorTick.bCanEverTick = true;
+
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
 		
@@ -50,30 +54,41 @@ ALocalMultiplayerCharacter::ALocalMultiplayerCharacter()
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName); // Attach the camera to the end of the boom and let the boom adjust to match the controller orientation
 	FollowCamera->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
 
+	// Crear el AttackCollider
+	AttackCollider = CreateDefaultSubobject<UBoxComponent>(TEXT("AttackCollider"));
+	AttackCollider->SetupAttachment(GetMesh(), FName("weapon")); 
+	AttackCollider->SetCollisionEnabled(ECollisionEnabled::NoCollision); // Desactivo collision
+
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
 }
 
 void ALocalMultiplayerCharacter::BeginPlay()
 {
-	// Call the base class  
 	Super::BeginPlay();
+
+	AttackCollider->OnComponentBeginOverlap.AddDynamic(this, &ALocalMultiplayerCharacter::OnAttackHit);
 }
 
 //////////////////////////////////////////////////////////////////////////
 // Input
 
-void ALocalMultiplayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+void ALocalMultiplayerCharacter::NotifyControllerChanged()
 {
+	Super::NotifyControllerChanged();
+
 	// Add Input Mapping Context
-	if (APlayerController* PlayerController = Cast<APlayerController>(GetController()))
+	if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
 	{
 		if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer()))
 		{
 			Subsystem->AddMappingContext(DefaultMappingContext, 0);
 		}
 	}
-	
+}
+
+void ALocalMultiplayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+{
 	// Set up action bindings
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent)) {
 		
@@ -87,9 +102,7 @@ void ALocalMultiplayerCharacter::SetupPlayerInputComponent(UInputComponent* Play
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ALocalMultiplayerCharacter::Look);
 
-		//ATTACK
-		EnhancedInputComponent->BindAction(AttackAction, ETriggerEvent::Triggered, this, &ALocalMultiplayerCharacter::Attack);
-
+		EnhancedInputComponent->BindAction(AttackAction, ETriggerEvent::Started, this, &ALocalMultiplayerCharacter::PerformAttack);
 	}
 	else
 	{
@@ -133,7 +146,43 @@ void ALocalMultiplayerCharacter::Look(const FInputActionValue& Value)
 	}
 }
 
-void ALocalMultiplayerCharacter::Attack(const FInputActionValue& Value) 
+void ALocalMultiplayerCharacter::PerformAttack()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Attack Pressed!"));
+	if (AttackAnimation)
+	{
+		PlayAnimMontage(AttackAnimation);
+	}
+
+	AttackCollider->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+
+	GetWorldTimerManager().SetTimerForNextTick([this]()
+		{
+			AttackCollider->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		});
 }
+
+void ALocalMultiplayerCharacter::OnAttackHit(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
+	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex,
+	bool bFromSweep, const FHitResult& SweepResult)
+{
+	// Verifico si es un enemigo
+	if (OtherActor && OtherActor != this)
+	{
+		ALocalMultiplayerCharacter* Enemy = Cast<ALocalMultiplayerCharacter>(OtherActor);
+		if (Enemy)
+		{
+			Enemy->TakeDamage(AttackDamage);
+		}
+	}
+}
+
+void ALocalMultiplayerCharacter::TakeDamage(float DamageAmount)
+{
+	Health -= DamageAmount;
+	UE_LOG(LogTemp, Warning, TEXT("Health: "), Health);
+	if (Health <= 0.0f)
+	{
+		Destroy();
+	}
+}
+

@@ -5,14 +5,15 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/A/SF/871AVYURJWFNJSVX14R1AN.uasset",
 				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/ThirdPerson/Maps/ThirdPersonMap.umap",
-				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/BossyEnemy/Animations/RootMotion/Attacks/Boss_Attack_Uppercut_RM.uasset",
-				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset",
+				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/ThirdPerson/Input/Actions/Attack.uasset",
 				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/ThirdPerson/Input/IMC_Default.uasset",
-				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/ThirdPerson/Input/Actions/IA_Attack.uasset",
-				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/ThirdPerson/Blueprints/TPC_2.uasset",
-				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/ThirdPerson/Input/Actions/Attack.uasset"
+				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset",
+				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/BossyEnemy/Animations/InPlace/Attacks/NewAnimMontage.uasset",
+				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/BossyEnemy/Animations/InPlace/Attacks/AttackMontage.uasset",
+				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/BossyEnemy/SkeletalMesh/SK_Mannequin_UE4_WithWeapon_Skeleton.uasset",
+				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/Characters/Mannequins/Animations/ABP_Manny.uasset",
+				"C:/Users/Guillem/Desktop/UNI/LearnCourseC++/ProvesUnreal2/LocalMultiplayer/Content/BossyEnemy/SkeletalMesh/SK_Mannequin_UE4_WithWeapon.uasset"
 			]
 		}
 	]

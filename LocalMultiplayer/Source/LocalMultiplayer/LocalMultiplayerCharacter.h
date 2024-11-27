@@ -20,7 +20,6 @@ class ALocalMultiplayerCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
-
 	/** Camera boom positioning the camera behind the character */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	USpringArmComponent* CameraBoom;
@@ -45,12 +44,10 @@ class ALocalMultiplayerCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* LookAction;
 
-	//Attack
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* AttackAction;
+	
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
-	float bach;
 
 public:
 	ALocalMultiplayerCharacter();
@@ -58,21 +55,47 @@ public:
 
 protected:
 
+	virtual void BeginPlay() override;
+
 	/** Called for movement input */
 	void Move(const FInputActionValue& Value);
 
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
 
-	void Attack(const FInputActionValue& Value);
 			
+public: 
+
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attack")
+	float AttackDamage = 20.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attack")
+	UAnimMontage* AttackAnimation;
+
+	UPROPERTY(VisibleAnywhere, Category = "Attack")
+	class UBoxComponent* AttackCollider;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+	float Health = 100.0f;
+
+	UFUNCTION(BlueprintCallable, Category = "Attack")
+	void PerformAttack();
+
+	UFUNCTION()
+	void OnAttackHit(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
+		UPrimitiveComponent* OtherComp, int32 OtherBodyIndex,
+		bool bFromSweep, const FHitResult& SweepResult);
+
+	UFUNCTION(BlueprintCallable, Category = "Health")
+	void TakeDamage(float DamageAmount);
+
 
 protected:
-	// APawn interface
+
+	virtual void NotifyControllerChanged() override;
+
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-	
-	// To add mapping context
-	virtual void BeginPlay();
 
 public:
 	/** Returns CameraBoom subobject **/

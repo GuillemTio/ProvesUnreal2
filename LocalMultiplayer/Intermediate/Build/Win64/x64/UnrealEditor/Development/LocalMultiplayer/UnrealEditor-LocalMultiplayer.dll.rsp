@@ -35,6 +35,7 @@
 /NODEFAULTLIB:"LIBCD"
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN:6
+/NOIMPLIB
 "C:\Users\Guillem\Desktop\UNI\LearnCourseC++\ProvesUnreal2\LocalMultiplayer\Intermediate\Build\Win64\x64\LocalMultiplayerEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
 "C:\Users\Guillem\Desktop\UNI\LearnCourseC++\ProvesUnreal2\LocalMultiplayer\Intermediate\Build\Win64\x64\UnrealEditor\Development\LocalMultiplayer\LocalMultiplayer.init.gen.cpp.obj"
 "C:\Users\Guillem\Desktop\UNI\LearnCourseC++\ProvesUnreal2\LocalMultiplayer\Intermediate\Build\Win64\x64\UnrealEditor\Development\LocalMultiplayer\LocalMultiplayerCharacter.gen.cpp.obj"
@@ -42,6 +43,7 @@
 "C:\Users\Guillem\Desktop\UNI\LearnCourseC++\ProvesUnreal2\LocalMultiplayer\Intermediate\Build\Win64\x64\UnrealEditor\Development\LocalMultiplayer\LocalMultiplayer.cpp.obj"
 "C:\Users\Guillem\Desktop\UNI\LearnCourseC++\ProvesUnreal2\LocalMultiplayer\Intermediate\Build\Win64\x64\UnrealEditor\Development\LocalMultiplayer\LocalMultiplayerGameMode.cpp.obj"
 "C:\Users\Guillem\Desktop\UNI\LearnCourseC++\ProvesUnreal2\LocalMultiplayer\Intermediate\Build\Win64\x64\UnrealEditor\Development\LocalMultiplayer\LocalMultiplayerCharacter.cpp.obj"
+"C:\Users\Guillem\Desktop\UNI\LearnCourseC++\ProvesUnreal2\LocalMultiplayer\Intermediate\Build\Win64\x64\UnrealEditor\Development\LocalMultiplayer\PerModuleInline.gen.cpp.obj"
 "C:\Users\Guillem\Desktop\UNI\LearnCourseC++\ProvesUnreal2\LocalMultiplayer\Intermediate\Build\Win64\x64\UnrealEditor\Development\LocalMultiplayer\Default.rc2.res"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Core\UnrealEditor-Core.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUObject\UnrealEditor-CoreUObject.lib"
@@ -74,6 +76,5 @@
 "dwmapi.lib"
 "imm32.lib"
 /OUT:"C:\Users\Guillem\Desktop\UNI\LearnCourseC++\ProvesUnreal2\LocalMultiplayer\Binaries\Win64\UnrealEditor-LocalMultiplayer.dll"
-/IMPLIB:"C:\Users\Guillem\Desktop\UNI\LearnCourseC++\ProvesUnreal2\LocalMultiplayer\Intermediate\Build\Win64\x64\UnrealEditor\Development\LocalMultiplayer\UnrealEditor-LocalMultiplayer.sup.lib"
 /PDB:"C:\Users\Guillem\Desktop\UNI\LearnCourseC++\ProvesUnreal2\LocalMultiplayer\Binaries\Win64\UnrealEditor-LocalMultiplayer.pdb"
 /ignore:4078

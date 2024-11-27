@@ -4,8 +4,10 @@
 /Yu"C:\Users\Guillem\Desktop\UNI\LearnCourseC++\ProvesUnreal2\LocalMultiplayer\Intermediate\Build\Win64\x64\LocalMultiplayerEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
 /Fp"C:\Users\Guillem\Desktop\UNI\LearnCourseC++\ProvesUnreal2\LocalMultiplayer\Intermediate\Build\Win64\x64\LocalMultiplayerEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
 /Fo"C:\Users\Guillem\Desktop\UNI\LearnCourseC++\ProvesUnreal2\LocalMultiplayer\Intermediate\Build\Win64\x64\UnrealEditor\Development\LocalMultiplayer\LocalMultiplayer.cpp.obj"
+/experimental:log "C:\Users\Guillem\Desktop\UNI\LearnCourseC++\ProvesUnreal2\LocalMultiplayer\Intermediate\Build\Win64\x64\UnrealEditor\Development\LocalMultiplayer\LocalMultiplayer.cpp.sarif"
 /sourceDependencies "C:\Users\Guillem\Desktop\UNI\LearnCourseC++\ProvesUnreal2\LocalMultiplayer\Intermediate\Build\Win64\x64\UnrealEditor\Development\LocalMultiplayer\LocalMultiplayer.cpp.dep.json"
 @"C:\Users\Guillem\Desktop\UNI\LearnCourseC++\ProvesUnreal2\LocalMultiplayer\Intermediate\Build\Win64\x64\UnrealEditor\Development\LocalMultiplayer\LocalMultiplayer.Shared.rsp"
+/d2ssa-cfg-question-
 /Zc:inline
 /nologo
 /Oi

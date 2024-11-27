@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LocalMultiplayerModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa9f0253c6748ea99603de70f76749ec2b978684")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6831c77ec0fecea12d65ca3f600dc5de59c9bf82")]
 [assembly: System.Reflection.AssemblyProductAttribute("LocalMultiplayerModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LocalMultiplayerModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

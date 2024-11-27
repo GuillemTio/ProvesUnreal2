@@ -39,20 +39,20 @@
     <ClCompile Include="..\..\Source\LocalMultiplayer\LocalMultiplayer.cpp">
       <Filter>Source\LocalMultiplayer</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\LocalMultiplayer\LocalMultiplayer.h">
+    <ClCompile Include="..\..\Source\LocalMultiplayer\LocalMultiplayer.h">
       <Filter>Source\LocalMultiplayer</Filter>
-    </ClInclude>
+    </ClCompile>
     <ClCompile Include="..\..\Source\LocalMultiplayer\LocalMultiplayerCharacter.cpp">
       <Filter>Source\LocalMultiplayer</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\LocalMultiplayer\LocalMultiplayerCharacter.h">
+    <ClCompile Include="..\..\Source\LocalMultiplayer\LocalMultiplayerCharacter.h">
       <Filter>Source\LocalMultiplayer</Filter>
-    </ClInclude>
+    </ClCompile>
     <ClCompile Include="..\..\Source\LocalMultiplayer\LocalMultiplayerGameMode.cpp">
       <Filter>Source\LocalMultiplayer</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\LocalMultiplayer\LocalMultiplayerGameMode.h">
+    <ClCompile Include="..\..\Source\LocalMultiplayer\LocalMultiplayerGameMode.h">
       <Filter>Source\LocalMultiplayer</Filter>
-    </ClInclude>
+    </ClCompile>
   </ItemGroup>
 </Project>

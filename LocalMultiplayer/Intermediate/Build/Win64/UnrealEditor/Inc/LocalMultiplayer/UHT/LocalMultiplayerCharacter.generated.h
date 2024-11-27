@@ -9,10 +9,19 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
+class UPrimitiveComponent;
+struct FHitResult;
 #ifdef LOCALMULTIPLAYER_LocalMultiplayerCharacter_generated_h
 #error "LocalMultiplayerCharacter.generated.h already included, missing '#pragma once' in LocalMultiplayerCharacter.h"
 #endif
 #define LOCALMULTIPLAYER_LocalMultiplayerCharacter_generated_h
+
+#define FID_Users_Guillem_Desktop_UNI_LearnCourseC___ProvesUnreal2_LocalMultiplayer_Source_LocalMultiplayer_LocalMultiplayerCharacter_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execTakeDamage); \
+	DECLARE_FUNCTION(execOnAttackHit); \
+	DECLARE_FUNCTION(execPerformAttack);
+
 
 #define FID_Users_Guillem_Desktop_UNI_LearnCourseC___ProvesUnreal2_LocalMultiplayer_Source_LocalMultiplayer_LocalMultiplayerCharacter_h_21_INCLASS_NO_PURE_DECLS \
 private: \
@@ -39,6 +48,7 @@ public: \
 #define FID_Users_Guillem_Desktop_UNI_LearnCourseC___ProvesUnreal2_LocalMultiplayer_Source_LocalMultiplayer_LocalMultiplayerCharacter_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Users_Guillem_Desktop_UNI_LearnCourseC___ProvesUnreal2_LocalMultiplayer_Source_LocalMultiplayer_LocalMultiplayerCharacter_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Users_Guillem_Desktop_UNI_LearnCourseC___ProvesUnreal2_LocalMultiplayer_Source_LocalMultiplayer_LocalMultiplayerCharacter_h_21_INCLASS_NO_PURE_DECLS \
 	FID_Users_Guillem_Desktop_UNI_LearnCourseC___ProvesUnreal2_LocalMultiplayer_Source_LocalMultiplayer_LocalMultiplayerCharacter_h_21_ENHANCED_CONSTRUCTORS \
 private: \

@@ -7,10 +7,10 @@
         "Includes": [
             "c:\\users\\guillem\\desktop\\uni\\learncoursec++\\provesunreal2\\localmultiplayer\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\localmultiplayer\\definitions.localmultiplayer.h",
             "c:\\users\\guillem\\desktop\\uni\\learncoursec++\\provesunreal2\\localmultiplayer\\source\\localmultiplayer\\localmultiplayergamemode.h",
-            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
-            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
-            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
-            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
             "c:\\users\\guillem\\desktop\\uni\\learncoursec++\\provesunreal2\\localmultiplayer\\intermediate\\build\\win64\\unrealeditor\\inc\\localmultiplayer\\uht\\localmultiplayergamemode.generated.h"
         ],
         "ImportedModules": [],
